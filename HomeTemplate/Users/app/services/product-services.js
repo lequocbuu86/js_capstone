@@ -1,4 +1,4 @@
-const BASE_URL = "https://66a7412753c13f22a3d0092b.mockapi.io/products";
+const BASE_URL = "https://683fd1e35b39a8039a55bd89.mockapi.io/api/Products";
 
 class ProductService {
   getProductList = () => {

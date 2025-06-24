@@ -43,20 +43,21 @@
         <nav class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
             <div class="flex items-center">
                 <a href="#" class="flex-shrink-0 flex items-center space-x-3">
-                    <img src="./../../../images/logo-light.svg" width="119.03" height="30" class="w-full" alt="Solid Logo" />
+                    <img src="./../../../images/logo-light.svg" width="119.03" height="30" class="w-full"
+                        alt="Solid Logo" />
                 </a>
             </div>
 
             <div class="hidden md:flex md:items-center md:justify-center flex-1">
                 <ul class="flex items-center space-x-10 font-medium">
                     <li>
-                        <a href="#"
-                            class="block py-2 px-3 text-blue-600 font-semibold transition-colors duration-300"
+                        <a href="#" class="block py-2 px-3 text-blue-600 font-semibold transition-colors duration-300"
                             aria-current="page">Home</a>
                     </li>
                     <li>
                         <a href="./../../../Admin/app/views/index.html"
-                            class="block py-2 px-3 text-gray-600 hover:text-blue-600 font-medium transition-colors duration-300">Admin Portal</a>
+                            class="block py-2 px-3 text-gray-600 hover:text-blue-600 font-medium transition-colors duration-300">Admin
+                            Portal</a>
                     </li>
                     <li>
                         <a href="#"
@@ -70,25 +71,37 @@
             </div>
 
             <div class="hidden md:flex items-center justify-end gap-4">
-                <button aria-label="theme toggler" class="p-2 rounded-full hover:bg-gray-100 transition-colors duration-300">
+                <button aria-label="theme toggler"
+                    class="p-2 rounded-full hover:bg-gray-100 transition-colors duration-300">
                     <svg class="h-5 w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                     </svg>
                 </button>
-                <button aria-label="theme toggler" class="p-2 rounded-full hover:bg-gray-100 transition-colors duration-300">
-                     <img alt="logo" loading="lazy" width="22" height="22" decoding="async" data-nimg="1" class="dark:hidden" style="color:transparent" src="./../../../images/icon-moon.svg" />
-                     <img alt="logo" loading="lazy" width="22" height="22" decoding="async" data-nimg="1" class="hidden dark:block" style="color:transparent" src="./../../../images/icon-sun.svg" />
+                <button aria-label="theme toggler"
+                    class="p-2 rounded-full hover:bg-gray-100 transition-colors duration-300">
+                    <img alt="logo" loading="lazy" width="22" height="22" decoding="async" data-nimg="1"
+                        class="dark:hidden" style="color:transparent" src="./../../../images/icon-moon.svg" />
+                    <img alt="logo" loading="lazy" width="22" height="22" decoding="async" data-nimg="1"
+                        class="hidden dark:block" style="color:transparent" src="./../../../images/icon-sun.svg" />
                 </button>
-                <a href="#" class="text-gray-600 hover:text-blue-600 font-medium transition-colors duration-300">Sign In</a>
-                <button type="button" class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition-colors duration-300 shadow-sm hover:shadow-md">Cart</button>
-                <button type="button" class="bg-green-500 text-white px-5 py-2 rounded-full hover:bg-green-600 transition-colors duration-300 shadow-sm hover:shadow-md">Sign Up</button>
+                <a href="#" class="text-gray-600 hover:text-blue-600 font-medium transition-colors duration-300">Sign
+                    In</a>
+                <button type="button"
+                    class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition-colors duration-300 shadow-sm hover:shadow-md">Cart</button>
+                <button type="button"
+                    class="bg-green-500 text-white px-5 py-2 rounded-full hover:bg-green-600 transition-colors duration-300 shadow-sm hover:shadow-md">Sign
+                    Up</button>
             </div>
-            
+
             <div class="md:hidden">
-                 <button data-collapse-toggle="navbar-multi-level" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
+                <button data-collapse-toggle="navbar-multi-level" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
                     <span class="sr-only">Open main menu</span>
-                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
                     </svg>
                 </button>
             </div>
@@ -111,7 +124,17 @@
             </div>
         </div>
         <!-- Bottom -->
-        <div class="animate__animated animate__fadeInDown animate__delay-600 mt-15 max-w-c-1280 px-4 md:px-8 xl:mt-20 xl:px-0">
+        <div class="max-w-md mx-auto">
+            <select id="productFilter" class="w-full p-2 border border-gray-300 rounded mb-6">
+                <option value="all">Tất cả</option>
+                <option value="iphone">iPhone</option>
+                <option value="samsung">Samsung</option>
+            </select>
+        </div>
+        </div>
+
+        <div
+            class="animate__animated animate__fadeInDown animate__delay-600 mt-15 max-w-c-1280 px-4 md:px-8 xl:mt-20 xl:px-0">
             <div id="productListContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
                 <!-- Product cards will be rendered here by JavaScript -->
             </div>
@@ -409,11 +432,34 @@
     </script>
 
 
+<!-- Filter  -->
+    <script>
+        const filterSelect = document.getElementById("productFilter");
+
+        filterSelect.addEventListener("change", () => {
+            const selected = filterSelect.value;
+            const products = document.querySelectorAll(".product");
+
+            products.forEach(product => {
+                if (selected === "all" || product.classList.contains(selected)) {
+                    product.style.display = "block";
+                } else {
+                    product.style.display = "none";
+                }
+            });
+        });
+
+        // Hiển thị tất cả khi load lần đầu
+        filterSelect.dispatchEvent(new Event("change"));
+    </script>
+
     <!-- Backtotop  -->
     <script src="./../../../libs/backToTop/util.js"></script>
     <script src="./../../../libs/backToTop/main.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.9.0/axios.min.js" integrity="sha512-FPlUpimug7gt7Hn7swE8N2pHw/+oQMq/+R/hH/2hZ43VOQ+Kjh25rQzuLyPz7aUWKlRpI7wXbY6+U3oFPGjPOA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.9.0/axios.min.js"
+        integrity="sha512-FPlUpimug7gt7Hn7swE8N2pHw/+oQMq/+R/hH/2hZ43VOQ+Kjh25rQzuLyPz7aUWKlRpI7wXbY6+U3oFPGjPOA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="module" src="./../controllers/main.js"></script>
 
 </body>
