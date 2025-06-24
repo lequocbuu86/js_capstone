@@ -47,3 +47,13 @@ const fetchProductList = () => {
 };
 
 fetchProductList(); 
+
+
+
+// Filter 
+getEle("productFilter").addEventListener("change", () => {
+const type = getEle("productFilter").ariaValueMax;
+  // console.log (type); 
+  const arrFiltered = PhoneList.filterPhone(type);
+  renderPhoneList;
+});
