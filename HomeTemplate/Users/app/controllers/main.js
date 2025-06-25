@@ -3,6 +3,7 @@ import productService from "../services/product-services.js";
 const getEle = (id) => document.getElementById(id);
 
 let allProducts = [];
+let cart = [];
 
 const renderProductList = (productList) => {
   let content = "";
@@ -27,9 +28,10 @@ const renderProductList = (productList) => {
             <span class="font-medium text-black dark:text-white">${product.type}</span>
           </div>
           <br>
-          <button type="button" class="bg-blue-600 text-white px-7.5 py-2.5 rounded-full hover:bg-blue-700 transition cursor-pointer">
-            Add to Cart
-          </button>
+          <button type="button" class="btn-add-cart bg-blue-600 text-white px-7.5 py-2.5 rounded-full hover:bg-blue-700 transition cursor-pointer" data-id="${product.id}">
+  Add to Cart
+</button>
+
         </div>
       </div>
     `;
@@ -62,7 +64,8 @@ getEle("productFilter").addEventListener("change", () => {
   renderProductList(filtered);
 });
 
-getId("brandFilter").addEventListener("change", (e) => {
+getEle("brandFilter").addEventListener("change", (e) => {
+
   const selectedType = e.target.value.toLowerCase();
 
   const filtered =
@@ -77,3 +80,85 @@ getId("brandFilter").addEventListener("change", (e) => {
 
 
 });
+
+
+
+
+// Add cart
+// // 
+// function getEle(id) {
+//   return document.getElementById(id)
+// };
+
+ 
+// getEle("btnthem").onclick = function () {
+//   // console.log("btnthem");
+//   const name = getEle("name")
+// const price = getEle("price").value;
+// const screen = getEle("screen").value;
+// const backCamera = getEle("backCamera").value;
+// const frontCamera = getEle("frontCamera").value;
+// const img = getEle("img").value;
+
+// console.log(name, price, screen, backCamera, frontCamera, img);
+
+
+// };
+
+
+// Gán sự kiện Add to Cart như hướng dẫn ở trên
+
+//  Xử lý nút Add to Cart bằng event delegation:
+
+getEle("productListContainer").addEventListener("click", function (e) {
+  if (e.target && e.target.classList.contains("btn-add-cart")) {
+    const productId = e.target.getAttribute("data-id");
+    const product = allProducts.find(p => p.id == productId);
+    if (product) {
+      cart.push(product);
+      alert(`Đã thêm "${product.name}" vào giỏ hàng!`);
+    }
+  }
+});
+
+
+// Hàm renderCart:
+
+const renderCart = () => {
+  const cartContainer = getEle("cartContent");
+  if (cart.length === 0) {
+    cartContainer.innerHTML = `<p class="text-gray-500">Chưa có sản phẩm nào trong giỏ hàng.</p>`;
+    return;
+  }
+
+  let html = "";
+  cart.forEach((product, index) => {
+    html += `
+      <div class="flex items-center justify-between p-4 border rounded bg-white dark:bg-gray-800">
+        <div>
+          <h4 class="text-lg font-semibold text-gray-800 dark:text-white">${product.name}</h4>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">Giá: $${product.price}</p>
+        </div>
+        <button class="text-red-600 hover:underline remove-btn" data-index="${index}">Xoá</button>
+      </div>
+    `;
+  });
+
+  cartContainer.innerHTML = html;
+};
+
+// Bắt sự kiện click vào nút "Cart" để hiển thị giỏ hàng
+document.querySelector("[data-modal-target='static-modal']").addEventListener("click", () => {
+  renderCart();
+});
+
+
+//  Xoá khỏi giỏ hàng:
+getEle("cartContent").addEventListener("click", function (e) {
+  if (e.target.classList.contains("remove-btn")) {
+    const index = e.target.getAttribute("data-index");
+    cart.splice(index, 1);
+    renderCart();
+  }
+});
+
