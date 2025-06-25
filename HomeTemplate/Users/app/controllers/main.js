@@ -49,6 +49,7 @@ const fetchProductList = () => {
     });
 };
 
+
 fetchProductList();
 
 // Filter theo loại sản phẩm
@@ -73,5 +74,6 @@ getId("brandFilter").addEventListener("change", (e) => {
   console.log("All Products:", allProducts);
   console.log("Selected Brand:", selectedType);
   console.log("Filtered:", filtered);  
+
 
 });
