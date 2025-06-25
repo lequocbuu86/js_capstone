@@ -2,6 +2,8 @@ import productService from "../services/product-services.js";
 
 const getEle = (id) => document.getElementById(id);
 
+let allProducts = [];
+
 const renderProductList = (productList) => {
   let content = "";
   productList.forEach((product) => {
@@ -39,21 +41,37 @@ const fetchProductList = () => {
   productService
     .getProductList()
     .then((res) => {
-      renderProductList(res.data);
+      allProducts = res.data;
+      renderProductList(allProducts);
     })
     .catch((err) => {
       console.error(err);
     });
 };
 
-fetchProductList(); 
+fetchProductList();
 
-
-
-// Filter 
+// Filter theo loại sản phẩm
 getEle("productFilter").addEventListener("change", () => {
-const type = getEle("productFilter").ariaValueMax;
-  // console.log (type); 
-  const arrFiltered = PhoneList.filterPhone(type);
-  renderPhoneList;
+  const type = getEle("productFilter").value.toLowerCase();
+  const filtered =
+    type === "all"
+      ? allProducts
+      : allProducts.filter((p) => p.type.toLowerCase() === type);
+  renderProductList(filtered);
+});
+
+getId("brandFilter").addEventListener("change", (e) => {
+  const selectedType = e.target.value.toLowerCase();
+
+  const filtered =
+    selectedType === "all"
+      ? allProducts
+      : allProducts.filter(p => p.type.toLowerCase() === selectedType);
+
+  renderListProduct(filtered);
+  console.log("All Products:", allProducts);
+  console.log("Selected Brand:", selectedType);
+  console.log("Filtered:", filtered);  
+
 });
