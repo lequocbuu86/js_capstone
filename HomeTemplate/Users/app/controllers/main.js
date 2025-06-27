@@ -4,7 +4,6 @@ const getEle = (id) => document.getElementById(id);
 
 let allProducts = [];
 
-// Thêm hiệu ứng loading khi tải sản phẩm
 const showLoading = () => {
   getEle("productListContainer").innerHTML = `
     <div class="col-span-full flex justify-center items-center py-12">
@@ -29,11 +28,6 @@ const renderProductList = (productList) => {
               ${product.type}
             </span>
           </div>
-<<<<<<< Updated upstream
-          <br>
-          <button type="button" class="bg-blue-600 text-white px-7.5 py-2.5 rounded-full hover:bg-blue-700 transition cursor-pointer">
-            Add to Cart
-=======
         </div>
         <div class="p-6">
           <h3 class="text-xl font-bold text-gray-900 mb-2 line-clamp-2 hover:text-blue-600 transition-colors duration-200 dark:text-white">
@@ -41,22 +35,12 @@ const renderProductList = (productList) => {
           </h3>
           <div class="space-y-2 mb-4">
             <div class="flex items-center text-sm text-gray-600 dark:text-gray-400">
-              <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
-              </svg>
               <span>$${product.price}</span>
             </div>
             <div class="flex items-center text-sm text-gray-600 dark:text-gray-400">
-              <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-              </svg>
               <span>${product.screen}</span>
             </div>
             <div class="flex items-center text-sm text-gray-600 dark:text-gray-400">
-              <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path>
-              </svg>
               <span>${product.backCamera}</span>
             </div>
           </div>
@@ -70,7 +54,6 @@ const renderProductList = (productList) => {
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m8 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01"></path>
             </svg>
             <span>Thêm vào giỏ</span>
->>>>>>> Stashed changes
           </button>
         </div>
       </div>
@@ -90,7 +73,6 @@ const fetchProductList = () => {
     })
     .catch((err) => {
       console.error(err);
-      // Hiển thị thông báo lỗi cho người dùng
       getEle("productListContainer").innerHTML = `
         <div class="col-span-full text-center py-12">
           <svg class="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -108,7 +90,7 @@ const fetchProductList = () => {
     });
 };
 
-// Filter theo loại sản phẩm
+// Filter theo loại
 getEle("productFilter").addEventListener("change", () => {
   const type = getEle("productFilter").value.toLowerCase();
   const filtered =
@@ -116,12 +98,10 @@ getEle("productFilter").addEventListener("change", () => {
       ? allProducts
       : allProducts.filter((p) => p.type.toLowerCase() === type);
   renderProductList(filtered);
-  
-  // Hiển thị thông báo số lượng sản phẩm
+
   const count = filtered.length;
   const message = count === 0 ? "Không tìm thấy sản phẩm nào" : `Tìm thấy ${count} sản phẩm`;
-  
-  // Tạo hoặc cập nhật thông báo
+
   let notification = document.getElementById('filter-notification');
   if (!notification) {
     notification = document.createElement('div');
@@ -129,37 +109,27 @@ getEle("productFilter").addEventListener("change", () => {
     notification.className = 'fixed top-20 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-6 py-3 rounded-lg shadow-lg z-50';
     document.body.appendChild(notification);
   }
-  
+
   notification.textContent = message;
   notification.style.display = 'block';
-  
+
   setTimeout(() => {
     notification.style.display = 'none';
   }, 2000);
 });
 
-<<<<<<< Updated upstream
-getId("brandFilter").addEventListener("change", (e) => {
+// Filter theo hãng (brand)
+getEle("brandFilter").addEventListener("change", (e) => {
   const selectedType = e.target.value.toLowerCase();
-
   const filtered =
     selectedType === "all"
       ? allProducts
       : allProducts.filter(p => p.type.toLowerCase() === selectedType);
-
-  renderListProduct(filtered);
+  renderProductList(filtered);
   console.log("All Products:", allProducts);
   console.log("Selected Brand:", selectedType);
   console.log("Filtered:", filtered);  
-
-
 });
-=======
+
+// Fetch danh sách sản phẩm lúc load
 fetchProductList();
-
-
-
-
-
-
->>>>>>> Stashed changes
