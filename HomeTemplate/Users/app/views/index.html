@@ -1,605 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Font Google -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <!-- Line awesome -->
-    <link rel="stylesheet"
-        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-    <link rel="stylesheet" href="./../../../CSS/flaticon/flaticon.css">
-    <!-- Font Flaticon -->
-    <link rel="stylesheet" href="./../../../CSS/flaticon/flaticon.css">
-    <link rel="stylesheet" href="./../../../libs/wowjs/animate.css">
-    <!-- OwlCarousel2 -->
-    <link rel="stylesheet" href="./../../../CSS/owl.carousel.min.css">
-    <link rel="stylesheet" href="./../../../CSS/owl.theme.default.min.css">
-    <!-- Tailwind -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
-    <!-- Animate CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="./../../../libs/wowjs/animate.css">
-    <!-- Fontawesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css"
-        integrity="sha512-58P9Hy7II0YeXLv+iFiLCv1rtLW47xmiRpC1oFafeKNShp8V5bKV/ciVtYqbk2YfxXQMt58DjNfkXFOn62xE+g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Slick  -->
-    <link rel="stylesheet" href="./../../../libs/slick/slick.css">
-    <link rel="stylesheet" href="./../../../libs/slick/slick-theme.css">
-    <title>Solid</title>
-    <link rel="stylesheet" href="./../../../CSS/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cyber Phone - iPhone 12</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/3904b33b1c.js" crossorigin="anonymous"></script>
 </head>
+<body class="bg-gradient-to-r from-cyan-200 to-blue-100 min-h-screen">
+  <!-- Header -->
+  <header class="flex items-center justify-between p-6 bg-white shadow">
+    <h1 class="text-3xl font-bold text-blue-600">CyberPhone</h1>
+    <nav class="space-x-6">
+      <a href="#" class="text-gray-700 font-medium hover:text-blue-500">Home</a>
+      <a href="#" class="text-gray-700 font-medium hover:text-blue-500">Admin</a>
+      <button data-modal-target="static-modal" class="relative text-gray-700 hover:text-blue-500">
+        <i class="fas fa-shopping-cart text-xl"></i>
+      </button>
+    </nav>
+  </header>
 
-<body>
-    <!-- Header -->
-    <header class="fixed left-0 top-0 bg-white z-999 w-full py-4 shadow-lg transition duration-300">
-        <nav class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-            <div class="flex items-center">
-                <a href="#" class="flex-shrink-0 flex items-center space-x-3">
-                    <img src="./../../../../images/360_F_277432530_peLp2WAlSLVtwV3h4tzFG8BhvruFrPwW.jpg"
-                        class="w-40 h-15" alt="Solid Logo" />
-                </a>
-            </div>
-
-            <div class="hidden md:flex md:items-center md:justify-center flex-1">
-                <ul class="flex items-center space-x-10 font-medium">
-                    <li>
-                        <a href="#" class="block py-2 px-3 text-blue-600 font-semibold transition-colors duration-300"
-                            aria-current="page">Home</a>
-                    </li>
-                    <li>
-                        <a href="./../../../Admin/app/views/index.html"
-                            class="block py-2 px-3 text-gray-600 hover:text-blue-600 font-medium transition-colors duration-300">Admin
-                            Portal</a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="block py-2 px-3 text-gray-600 hover:text-blue-600 font-medium transition-colors duration-300">Products</a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="block py-2 px-3 text-gray-600 hover:text-blue-600 font-medium transition-colors duration-300">Support</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="hidden md:flex items-center justify-end gap-4">
-                <button aria-label="theme toggler"
-                    class="p-2 rounded-full hover:bg-gray-100 transition-colors duration-300">
-                    <svg class="h-5 w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                    </svg>
-                </button>
-                <!-- <button aria-label="theme toggler"
-                    class="p-2 rounded-full hover:bg-gray-100 transition-colors duration-300">
-                    <img alt="logo" loading="lazy" width="22" height="22" decoding="async" data-nimg="1"
-                        class="dark:hidden" style="color:transparent" src="./../../../images/icon-moon.svg" />
-                    <img alt="logo" loading="lazy" width="22" height="22" decoding="async" data-nimg="1"
-                        class="hidden dark:block" style="color:transparent" src="./../../../images/icon-sun.svg" />
-                </button> -->
-                <!-- <a href="#" class="text-gray-600 hover:text-blue-600 font-medium transition-colors duration-300">Sign
-                    In</a> -->
-                <!-- <button type="button"
-                    class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition-colors duration-300 shadow-sm hover:shadow-md">Cart</button>
-                <button type="button" -->
-
-
-
-
-
-
-                <!-- class="bg-green-500 text-white px-5 py-2 rounded-full hover:bg-green-600 transition-colors duration-300 shadow-sm hover:shadow-md">Sign
-                    Up</button> -->
-            </div>
-
-
-
-
-
-            <!-- Modal toggle -->
-
-            <button data-modal-target="static-modal" data-modal-toggle="static-modal"
-                class="flex items-center gap-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                type="button">
-                <!-- Cart Icon -->
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="w-5 h-5">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437m0 0L6.75 14.25h10.5l1.644-7.125H5.106m0 0L4.5 4.5m1.5 15.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
-                </svg>
-                Cart
-            </button>
-
-
-
-            <!-- Main modal -->
-            <div id="static-modal" data-modal-backdrop="static" tabindex="-1" aria-hidden="true"
-                class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-                <div class="relative p-4 w-full max-w-6xl max-h-full">
-                    <!-- Modal content -->
-                    <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
-                        <!-- Modal header -->
-                        <div
-                            class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
-                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                                Giỏ hàng
-                            </h3>
-                            <button type="button"
-                                class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                                data-modal-hide="static-modal">
-                                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                    viewBox="0 0 14 14">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
-                                </svg>
-                                <span class="sr-only">Close modal</span>
-                            </button>
-                        </div>
-                        <!-- Modal body -->
-                        <div class="max-w-8xl md:p-5 space-y-4">
-                            <div id="cartContent">
-
-                                <!-- Sản phẩm sẽ được render vào đây -->
-                            </div>
-                        </div>
-
-                        <!-- Modal footer -->
-                        <div
-                            class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
-                            <button data-modal-hide="static-modal" type="button"
-                                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">OK</button>
-                            <button data-modal-hide="static-modal" type="button"
-                                class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="md:hidden">
-                <button data-collapse-toggle="navbar-multi-level" type="button"
-                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
-                    <span class="sr-only">Open main menu</span>
-                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 17 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M1 1h15M1 7h15M1 13h15" />
-                    </svg>
-                </button>
-            </div>
-        </nav>
-    </header>
-
-
-    <!-- Number -->
-    <section class="px-4 py-12 md:px-6 lg:py-16 2xl:px-0">
-        <div
-            class="relative max-w-[1390px] mx-auto rounded-lg bg-gradient-to-t from-[#F8F9FF] to-[#DEE7FF] py-12 dark:bg-blacksection dark:bg-gradient-to-t dark:from-transparent dark:to-transparent dark:stroke-strokedark xl:py-16">
-            <!-- <img alt="Man" loading="lazy" width="335" height="384" decoding="async" data-nimg="1"
-                class="absolute -left-15 -top-25 -z-1 lg:left-0"
-                src="./images/shape-04.png" style="color: transparent;"><img alt="Doodle" loading="lazy" width="132"
-                height="132" decoding="async" data-nimg="1" class="absolute bottom-0 right-0 -z-1"
-                src="./../../../../images/" style="color: transparent;"><img alt="Dotted" loading="lazy"
-                decoding="async" data-nimg="fill" class="absolute left-0 top-0 -z-1 dark:hidden"
-                src="/images/shape-dotted-light-02.svg"
-                style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">                 -->
-            <div
-                class="animate__animated animate__fadeInDown mx-auto mb-8 px-4 text-center md:w-4/5 md:px-0 lg:mb-10 lg:w-2/3 xl:w-1/2">
-                <h2 class="mb-3 text-[36px] font-bold text-black dark:text-white xl:text-[40px]">Welcome to Store Phone
-                </h2>
-                <p class="text-[#757693] leading-relaxed text-[16px] md:text-[17px]">
-                    Store Phone is your trusted destination for the latest smartphones, accessories, and trade-in
-                    services.
-                    We offer top models like iPhone, Samsung Galaxy, and more at unbeatable value. Visit us for
-                    personalized support,
-                    official warranty, and a seamless phone shopping experience.
-                </p>
-
-                <img src="./../../../../images/so-sanh-iphone-va-samsung-1.webp" alt="Comparison Image"
-                    class="mx-auto mt-6 w-full max-w-md rounded-lg shadow-lg" />
-            </div>
-            <!-- <div class="flex flex-wrap justify-center gap-20 lg:gap-42.5">
-                <div class="animate__animated animate__fadeInDown text-center" style="animation-delay: 1s; animation-duration: 1.5s;">
-                    <h3 class="mb-2.5 text-[44px] font-bold text-black dark:text-white xl:text-sectiontitle3">500K</h3>
-                    <p class="text-[22px] text-[#757693] lg:text-para2">World Wide Clients</p>
-                </div>
-                <div class="animate__animated animate__fadeInDown text-center" style="animation-delay: 1.2s; animation-duration: 1.5s;">
-                    <h3 class="mb-2.5 text-[44px] font-bold text-black dark:text-white xl:text-sectiontitle3">1M+</h3>
-                    <p class="text-[22px] text-[#757693] lg:text-para2">Downloads</p>
-                </div>
-                <div class="animate__animated animate__fadeInDown text-center" style="animation-delay: 1.4s; animation-duration: 1.5s;">
-                    <h3 class="mb-2.5 text-[44px] font-bold text-black dark:text-white xl:text-sectiontitle3">865</h3>
-                    <p class="text-[22px] text-[#757693] lg:text-para2">Winning Award</p>
-                </div>
-            </div> -->
-        </div>
-    </section>
-
-
-    <!-- New & Blog -->
-    <section class="py-20 lg:py-25 xl:py-30">
-        <!-- Top -->
-        <div
-            class="animate__animated animate__fadeInDown animate__delay-300 border-stroke mx-auto mb-7 max-w-c-1390 px-4 md:px-8 2xl:px-0">
-            <div class="animate_top mx-auto text-center" style="opacity: 1; transform: none;">
-                <div
-                    class="mb-4 inline-block rounded-full bg-zumthor px-5 py-2.5 dark:border dark:border-strokedark dark:bg-black sectioninline-block px-4 py-1 mb-4 text-sm font-medium text-gray-700 bg-blue-100 rounded-full">
-                    <span class="text-sectiontitle font-medium text-black dark:text-white">PHONE</span>
-                </div>
-                <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
-                    IPHONE & SAMSUNG</h2>
-
-            </div>
-        </div>
-        <!-- Bottom -->
-        <div class="max-w-md mx-auto">
-            <select id="productFilter" class="w-full p-2 border border-gray-300 rounded mb-6">
-                <option value="all">Tất cả</option>
-                <option value="iphone">iPhone</option>
-                <option value="samsung">Samsung</option>
-            </select>
-        </div>
-        </div>
-
-        <div
-            class="animate__animated animate__fadeInDown animate__delay-600 mt-15 max-w-c-1280 px-4 md:px-8 xl:mt-20 xl:px-0">
-            <div id="productListContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-                <!-- Product cards will be rendered here by JavaScript -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-white mt-20 dark:bg-gray-900">
-        <div class="w-full py-10 border-t border-gray-200"></div>
-        <div class="animate__animated animate__fadeInDown mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8"
-            style="animation-delay: 0.5s; animation-duration: 1s;">
-            <div class="md:flex md:justify-between ">
-                <div class="footer__left mb-6 md:mb-0">
-                    <a href="#" class="flex items-center">
-                        <img src="./../../../../images/360_F_277432530_peLp2WAlSLVtwV3h4tzFG8BhvruFrPwW.jpg"
-                            class="h-8 me-3" alt="FlowBite Logo" />
-
-                    </a>
-                    <p class="py-3 text-gray-500 dark:text-gray-400 font-medium">Lorem ipsum dolor sit amet, consectetur
-                        <br>adipiscing elit.
-                    </p>
-                    <h5 class="py-5 text-gray-500 dark:text-gray-400 font-medium">C O N T A C T</h5>
-                    <a href="#" class="py-3 text-2xl font-bold">
-                        hello@solid.com
-                    </a>
-                </div>
-                <div class="footer__right grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-                    <div>
-                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Quick Links</h2>
-                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">Home</a>
-                            </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">Product</a>
-                            </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">Careers</a>
-                            </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">Pricing</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Support</h2>
-                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline ">Company</a>
-                            </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">Press media</a>
-                            </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">Our Blog</a>
-                            </li>
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">Contact Us</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Newsletter</h2>
-                        <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                            <li class="mb-4">
-                                <a href="#" class="hover:underline">Subscribe to receive future <br>updates</a>
-                            </li>
-                            <form>
-                                <div class="relative">
-
-                                    <textarea
-                                        class="w-full rounded-full border border-stroke px-6 py-3 shadow-solid-11 focus:border-primary focus:outline-none dark:border-strokedark dark:bg-black dark:shadow-none dark:focus:border-primary"
-                                        placeholder="Email address"></textarea>
-                                    <button class="absolute right-0 p-4" type="button"
-                                        class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"><svg
-                                            xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            fill="currentColor" class="bi bi-caret-right" viewBox="0 0 16 16">
-                                            <path
-                                                d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753" />
-                                        </svg></button>
-                                </div>
-                            </form>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-            <div
-                class=" flex flex-col flex-wrap items-center justify-center gap-5  lg:flex-row lg:justify-between lg:gap-0    ">
-                <div class="">
-                    <ul class="flex items-center gap-8 text-sm text-gray-500 sm:text-center dark:text-gray-400">
-                        <li>
-                            <a href="#">English</a>
-                        </li>
-                        <li>
-                            <a href="#">Privacy Policy</a>
-                        </li>
-                        <li>
-                            <a href="#">Support</a>
-                        </li>
-                    </ul>
-
-                </div>
-                <div>
-                    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2025 Solid. All rights
-                        reserved
-                    </span>
-                </div>
-                <div class="flex mt-4 sm:justify-center sm:mt-0">
-                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
-                        <svg class="fill-[#D1D8E0] transition-all duration-300 hover:fill-primary" width="24"
-                            height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_48_1499)">
-                                <path
-                                    d="M14 13.5H16.5L17.5 9.5H14V7.5C14 6.47 14 5.5 16 5.5H17.5V2.14C17.174 2.097 15.943 2 14.643 2C11.928 2 10 3.657 10 6.7V9.5H7V13.5H10V22H14V13.5Z"
-                                    fill=""></path>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_48_1499">
-                                    <rect width="24" height="24" fill="white"></rect>
-                                </clipPath>
-                            </defs>
-                        </svg>
-                        <span class="sr-only">Facebook page</span>
-                    </a>
-                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5" width="24"
-                        height="24">
-                        <svg class="fill-[#D1D8E0] transition-all duration-300 hover:fill-primary" width="24"
-                            height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_48_1502)">
-                                <path
-                                    d="M22.162 5.65593C21.3985 5.99362 20.589 6.2154 19.76 6.31393C20.6337 5.79136 21.2877 4.96894 21.6 3.99993C20.78 4.48793 19.881 4.82993 18.944 5.01493C18.3146 4.34151 17.4803 3.89489 16.5709 3.74451C15.6615 3.59413 14.7279 3.74842 13.9153 4.18338C13.1026 4.61834 12.4564 5.30961 12.0771 6.14972C11.6978 6.98983 11.6067 7.93171 11.818 8.82893C10.1551 8.74558 8.52832 8.31345 7.04328 7.56059C5.55823 6.80773 4.24812 5.75098 3.19799 4.45893C2.82628 5.09738 2.63095 5.82315 2.63199 6.56193C2.63199 8.01193 3.36999 9.29293 4.49199 10.0429C3.828 10.022 3.17862 9.84271 2.59799 9.51993V9.57193C2.59819 10.5376 2.93236 11.4735 3.54384 12.221C4.15532 12.9684 5.00647 13.4814 5.95299 13.6729C5.33661 13.84 4.6903 13.8646 4.06299 13.7449C4.32986 14.5762 4.85 15.3031 5.55058 15.824C6.25117 16.345 7.09712 16.6337 7.96999 16.6499C7.10247 17.3313 6.10917 17.8349 5.04687 18.1321C3.98458 18.4293 2.87412 18.5142 1.77899 18.3819C3.69069 19.6114 5.91609 20.2641 8.18899 20.2619C15.882 20.2619 20.089 13.8889 20.089 8.36193C20.089 8.18193 20.084 7.99993 20.076 7.82193C20.8949 7.2301 21.6016 6.49695 22.163 5.65693L22.162 5.65593Z"
-                                    fill=""></path>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_48_1502">
-                                    <rect width="24" height="24" fill="white"></rect>
-                                </clipPath>
-                            </defs>
-                        </svg>
-                        <span class="sr-only">Twitter page</span>
-                    </a>
-                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
-                        <svg class="fill-[#D1D8E0] transition-all duration-300 hover:fill-primary" width="24"
-                            height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_48_1505)">
-                                <path
-                                    d="M6.94 5.00002C6.93974 5.53046 6.72877 6.03906 6.35351 6.41394C5.97825 6.78883 5.46944 6.99929 4.939 6.99902C4.40857 6.99876 3.89997 6.78779 3.52508 6.41253C3.1502 6.03727 2.93974 5.52846 2.94 4.99802C2.94027 4.46759 3.15124 3.95899 3.5265 3.5841C3.90176 3.20922 4.41057 2.99876 4.941 2.99902C5.47144 2.99929 5.98004 3.21026 6.35492 3.58552C6.72981 3.96078 6.94027 4.46959 6.94 5.00002ZM7 8.48002H3V21H7V8.48002ZM13.32 8.48002H9.34V21H13.28V14.43C13.28 10.77 18.05 10.43 18.05 14.43V21H22V13.07C22 6.90002 14.94 7.13002 13.28 10.16L13.32 8.48002Z"
-                                    fill=""></path>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_48_1505">
-                                    <rect width="24" height="24" fill="white"></rect>
-                                </clipPath>
-                            </defs>
-                        </svg>
-
-
-
-                        <span class="sr-only">iconnnn</span>
-                    </a>
-                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
-                        <svg class="fill-[#D1D8E0] transition-all duration-300 hover:fill-primary" width="24"
-                            height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_48_1508)">
-                                <path
-                                    d="M7.443 5.3501C8.082 5.3501 8.673 5.4001 9.213 5.5481C9.70301 5.63814 10.1708 5.82293 10.59 6.0921C10.984 6.3391 11.279 6.6861 11.475 7.1311C11.672 7.5761 11.77 8.1211 11.77 8.7141C11.77 9.4071 11.623 10.0001 11.279 10.4451C10.984 10.8911 10.492 11.2861 9.902 11.5831C10.738 11.8311 11.377 12.2761 11.77 12.8691C12.164 13.4631 12.41 14.2051 12.41 15.0461C12.41 15.7391 12.262 16.3321 12.016 16.8271C11.77 17.3221 11.377 17.7671 10.934 18.0641C10.4528 18.3825 9.92084 18.6165 9.361 18.7561C8.771 18.9051 8.181 19.0041 7.591 19.0041H1V5.3501H7.443ZM7.049 10.8901C7.59 10.8901 8.033 10.7421 8.377 10.4951C8.721 10.2481 8.869 9.8021 8.869 9.2581C8.869 8.9611 8.819 8.6641 8.721 8.4671C8.623 8.2691 8.475 8.1201 8.279 7.9721C8.082 7.8731 7.885 7.7741 7.639 7.7251C7.393 7.6751 7.148 7.6751 6.852 7.6751H4V10.8911H7.05L7.049 10.8901ZM7.197 16.7281C7.492 16.7281 7.787 16.6781 8.033 16.6291C8.28138 16.5819 8.51628 16.4805 8.721 16.3321C8.92139 16.1873 9.08903 16.002 9.213 15.7881C9.311 15.5411 9.41 15.2441 9.41 14.8981C9.41 14.2051 9.213 13.7101 8.82 13.3641C8.426 13.0671 7.885 12.9191 7.246 12.9191H4V16.7291H7.197V16.7281ZM16.689 16.6781C17.082 17.0741 17.672 17.2721 18.459 17.2721C19 17.2721 19.492 17.1241 19.885 16.8771C20.279 16.5801 20.525 16.2831 20.623 15.9861H23.033C22.639 17.1731 22.049 18.0141 21.263 18.5581C20.475 19.0531 19.541 19.3501 18.41 19.3501C17.6864 19.3523 16.9688 19.2179 16.295 18.9541C15.6887 18.7266 15.148 18.3529 14.721 17.8661C14.2643 17.4107 13.9267 16.8498 13.738 16.2331C13.492 15.5901 13.393 14.8981 13.393 14.1061C13.393 13.3641 13.492 12.6721 13.738 12.0281C13.9745 11.4082 14.3245 10.8378 14.77 10.3461C15.213 9.9011 15.754 9.5061 16.344 9.2581C17.0007 8.99416 17.7022 8.85969 18.41 8.8621C19.246 8.8621 19.984 9.0111 20.623 9.3571C21.263 9.7031 21.754 10.0991 22.148 10.6931C22.5499 11.2636 22.8494 11.8998 23.033 12.5731C23.131 13.2651 23.18 13.9581 23.131 14.7491H16C16 15.5411 16.295 16.2831 16.689 16.6791V16.6781ZM19.787 11.4841C19.443 11.1381 18.902 10.9401 18.262 10.9401C17.82 10.9401 17.475 11.0391 17.18 11.1871C16.885 11.3361 16.689 11.5341 16.492 11.7321C16.311 11.9234 16.1912 12.1643 16.148 12.4241C16.098 12.6721 16.049 12.8691 16.049 13.0671H20.475C20.377 12.3251 20.131 11.8311 19.787 11.4841V11.4841ZM15.459 6.2901H20.967V7.6261H15.46V6.2901H15.459Z">
-                                </path>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_48_1508">
-                                    <rect width="24" height="24" fill="white"></rect>
-                                </clipPath>
-                            </defs>
-                        </svg>
-                        <span class="sr-only">GitHub account</span>
-                    </a>
-
-                </div>
-            </div>
-        </div>
-    </footer>
-    <a href="#" class="backtotop cd-top text-replace bg-blue-600 text-white js-cd-top">
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-up"
-            viewBox="0 0 16 16">
-            <path fill-rule="evenodd"
-                d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708z" />
-        </svg>
-    </a>
-
-
-    <!-- Hiệu ứng counnter number  -->
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-    <script src="https://unpkg.com/swiper@8.0.7/swiper-bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"
-        integrity="sha512-ZKNVEa7gi0Dz4Rq9jXcySgcPiK+5f01CqW+ZoKLLKr9VMXuCsw3RjWiv8ZpIOa0hxO79np7Ec8DDWALM0bDOaQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./../../../libs/countup/jquery.countup.min.js"></script>
-    <script>
-        $('.counter').countUp();
-    </script>
-    <!-- WOW -->
-    <script src="./../../../libs/wowjs/wow.min.js"></script>
-    <script>
-        new WOW().init();
-    </script>
-
-    <!-- OWL JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-        $(document).ready(function () {
-            $(".carousel2").owlCarousel({
-                loop: true, //lặp lại các item
-                margin: 10, //khoảng cách giữa các item
-                nav: false, //hiện mũi tên trái phải
-                responsive: {
-                    0: {
-                        items: 1 //số lượng item khi ở màn hình >= 0
-                    },
-                    576: {
-                        items: 3 //số lượng item khi ở màn hình >= 576px
-                    }
-                }
-            });
-        });
-    </script>
-    <!-- OwlCarousel2 -->
-    <script src="./../../../libs/owlcarousel/owl.carousel.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $(".owl-carousel").owlCarousel();
-        });
-    </script>
-    <script src="./../../../libs/backToTop/util.js"></script>
-    <script src="./../../../libs/backToTop/main.js"></script>
-    <!-- Script FLowbites -->
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
-
-
-    <!-- Slick Jquery  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./../../../libs/slick/slick.min.js"></script>
-    <script>$(document).ready(function () {
-            $('.slick__slider').slick({
-                infinite: false,
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                dots: true,
-                autoplay: 1000,
-            });
-        });
-    </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-    <!-- Hiệu ứng đóng mở dấu cộng trừ -->
-    <script>
-        const accordions = document.querySelectorAll('#accordion details');
-
-
-        function updateIcons() {
-            accordions.forEach((el) => {
-                const icon = el.querySelector('.icon');
-                icon.textContent = el.open ? '−' : '+';
-            });
-        }
-
-        accordions.forEach((item) => {
-            item.addEventListener('toggle', () => {
-                if (item.open) {
-                    // Đóng các mục khác
-                    accordions.forEach((el) => {
-                        if (el !== item) el.open = false;
-                    });
-                }
-                // Cập nhật lại icon sau toggle
-                updateIcons();
-            });
-
-            // Cập nhật icon khi click
-            item.querySelector('summary').addEventListener('click', () => {
-                // Delay để toggle kịp cập nhật
-                setTimeout(updateIcons, 10);
-            });
-        });
-
-        // Cập nhật ban đầu
-        updateIcons();
-    </script>
-
-
-    <!-- Filter  -->
-    <script>
-        const filterSelect = document.getElementById("productFilter");
-
-        filterSelect.addEventListener("change", () => {
-            const selected = filterSelect.value;
-            const products = document.querySelectorAll(".product");
-
-            products.forEach(product => {
-                if (selected === "all" || product.classList.contains(selected)) {
-                    product.style.display = "block";
-                } else {
-                    product.style.display = "none";
-                }
-            });
-        });
-
-        // Hiển thị tất cả khi load lần đầu
-        filterSelect.dispatchEvent(new Event("change"));
-    </script>
-
-    <!-- Backtotop  -->
-    <script src="./../../../libs/backToTop/util.js"></script>
-    <script src="./../../../libs/backToTop/main.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.9.0/axios.min.js"
-        integrity="sha512-FPlUpimug7gt7Hn7swE8N2pHw/+oQMq/+R/hH/2hZ43VOQ+Kjh25rQzuLyPz7aUWKlRpI7wXbY6+U3oFPGjPOA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script type="module" src="./../controllers/main.js"></script>
-
-
-    <!-- Modal giỏ hàng — đặt ở cuối  -->
-
-    <div id="productListContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6"></div>
-    <!-- Modal -->
-<div id="cart-modal" data-modal-backdrop="static" tabindex="-1" aria-hidden="true"
-  class="hidden fixed inset-0 z-40 flex items-center justify-center bg-black bg-opacity-50">
-  <div class="bg-white w-full max-w-3xl rounded-lg shadow-lg p-6 relative">
-    <div class="flex justify-between items-center mb-4">
-      <h3 class="text-xl font-semibold">Giỏ hàng</h3>
-      <button data-modal-hide="cart-modal" class="text-gray-500 hover:text-red-500 text-2xl">&times;</button>
+  <!-- Hero Section -->
+  <section class="bg-white py-10 px-4 text-center shadow">
+    <h2 class="text-4xl font-bold text-blue-600 mb-4">iPhone 12</h2>
+    <p class="text-lg text-gray-700">Power. Performance. Style.</p>
+    <div class="mt-6">
+      <i class="fas fa-star text-yellow-400"></i>
+      <i class="fas fa-star text-yellow-400"></i>
+      <i class="fas fa-star text-yellow-400"></i>
+      <i class="fas fa-star text-yellow-400"></i>
+      <i class="fas fa-star-half-alt text-yellow-400"></i>
     </div>
-    <div id="cartContent" class="space-y-4">
-      <!-- Sản phẩm trong giỏ hàng render ở đây -->
+  </section>
+
+  <!-- Filters -->
+  <section class="flex flex-wrap justify-center gap-6 p-6 bg-blue-50">
+    <div>
+      <label for="productFilter" class="block text-sm font-medium text-gray-700 mb-1">Filter by Type</label>
+      <select id="productFilter" class="rounded-md border border-gray-300 px-3 py-2 shadow-sm">
+        <option value="all">All</option>
+        <option value="iphone">iPhone</option>
+        <option value="samsung">Samsung</option>
+      </select>
     </div>
-    <div class="flex justify-end mt-6">
-      <button data-modal-hide="cart-modal" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Đóng</button>
+    <div>
+      <label for="brandFilter" class="block text-sm font-medium text-gray-700 mb-1">Filter by Brand</label>
+      <select id="brandFilter" class="rounded-md border border-gray-300 px-3 py-2 shadow-sm">
+        <option value="all">All</option>
+        <option value="iphone">iPhone</option>
+        <option value="samsung">Samsung</option>
+      </select>
+    </div>
+  </section>
+
+  <!-- Product List -->
+  <section id="productListContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+    <!-- Sản phẩm sẽ được render ở đây -->
+  </section>
+
+  <!-- Modal Giỏ hàng -->
+  <div id="cart-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div class="bg-white rounded-lg shadow-lg max-w-3xl w-full p-6">
+      <div class="flex justify-between items-center mb-4">
+        <h3 class="text-xl font-bold">Giỏ hàng</h3>
+        <button onclick="document.getElementById('cart-modal').classList.add('hidden')" class="text-red-500 font-bold text-xl">&times;</button>
+      </div>
+      <table class="w-full table-auto border-collapse">
+        <thead>
+          <tr class="text-left border-b">
+            <th class="px-4 py-2">Hình</th>
+            <th class="px-4 py-2">Tên</th>
+            <th class="px-4 py-2">Giá</th>
+            <th class="px-4 py-2">Số lượng</th>
+            <th class="px-4 py-2">Tổng</th>
+            <th class="px-4 py-2">Xoá</th>
+          </tr>
+        </thead>
+        <tbody id="cartBody">
+          <!-- Sản phẩm trong giỏ sẽ được render ở đây -->
+        </tbody>
+      </table>
+      <div class="flex justify-between items-center mt-6">
+        <strong>Tổng tiền:</strong>
+        <span id="totalMoney" class="text-xl text-blue-600 font-bold">$0.00</span>
+      </div>
     </div>
   </div>
-</div>
 
+  <!-- Script controllers -->
+  <script type="module" src="./../controllers/main.js"></script>
+  <script src="./../cart/addcart.js"></script>
 </body>
-
 </html>
